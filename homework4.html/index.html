@@ -1,0 +1,518 @@
+<html>
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .mobile-block {
+            width: 375px;
+            background-color: #f1f1f1;
+        }
+
+        #header {
+            padding: 20px;
+        }
+        
+        .logo {
+            display: inline-block;
+            width: 300px;
+            vertical-align: middle;
+        }
+
+        .ham {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .ham>div {
+            width: 28px;
+            height: 3px;
+            background-color: #c71b0a;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            line-height: 50px;
+            font-weight: 700;
+            padding-left: 32px;
+            margin-top: 10px;
+            font-family: 'Noto Sans', sans-serif;
+            color: #000000
+        }
+
+        .maintitle {
+            font-size: 34px;
+            line-height: 50px;
+            font-weight: 700;
+            padding-left: 25px;
+            padding-right: 24px;
+            font-family: 'Noto Sans TC', sans-serif;
+            color: #404040;
+            margin-bottom: 35px;
+        }
+
+        figure {
+            margin: 0
+        }
+
+        .hero-figcaption {
+            width: 360px;
+            font-family: 'Noto Sans', sans-serif;
+            padding: 21px 0px 0px 8px;
+            font-size: 14px;
+            line-height: 20px;
+            color: #808080;
+            font-weight: 400;
+        } 
+        
+        .mobile-block1 {
+            width: 375px;
+            background-color: #f1f1f1;
+            padding: 20px;
+        }
+
+        #metadata-block {
+            width: 304px;
+            height: 172px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 54px;
+        }
+
+        .top-separation {
+            border-top: 1px solid #D0D0D0;
+            padding-left: 4px;
+            border-right: 1px solid #D0D0D0;
+            width: 100%;
+            height: 15px;
+        }
+
+        .bottom-separation {
+            border-bottom: 1px solid #D0D0D0;
+            padding-left: 4px;
+            border-right: 1px solid #D0D0D0;
+            width: 100%;
+            height: 15px;
+        }
+
+        .category {
+            font-size: 16px;
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 700;
+            color: #A67A44;
+            line-height: 22px;
+            margin: -5px 211px 17px 13px;
+        }
+
+        .date {
+            font-size: 14px;
+            line-height: 20px;
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 400;
+            color: #808080;
+            margin: -5px 0px 45px 4px;
+        }
+
+        .tag-bt {
+            border: 1px solid #808080;
+            border-radius: 30px;
+            display: inline-block;
+            padding: 6px 13px;
+            font-size: 14px;
+            line-height: 20px;
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 400;
+            color: #808080;
+        }
+
+        .mobile-block2 {
+            width: 375px;
+            background-color: #f1f1f1;
+            padding: 3px;
+        }
+
+        #toolbox {
+            width: 286px;
+            height: 36px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 37px;
+        }
+
+        #toolbox>img {
+            height: 100%;
+        }
+
+        .paragraph {
+            width: 295px;
+            font-size: 20px;
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 400;
+            line-height: 40px;
+            color: #404040;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 40px;
+            text-align: justify;
+        }
+
+        .abbreviation-circle {
+            width: 20px;
+            height: 20px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .abbreviation-triangle {
+            border-top: 5px solid #ffffff;
+            border-bottom: 5px solid #ffffff;
+            border-left: 8px solid #D0A67D;
+            display: inline-block;
+            margin: 5px 5px 5px 7px;
+        }
+
+        figure {
+            margin: 0;
+        }
+
+        .small-figcaption {
+            width: 235px;
+            border-bottom: 1px solid #D0A67D;
+            padding: 15px 0px 15px 0px;
+            margin-right: 15px;
+            margin-left: auto;
+            font-size: 14px;
+            line-height: 19px;
+            color: #999999;
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 400;
+            letter-spacing: 0.4px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .relateds {
+            width: 375px;
+            background-color: #f1f1f1;
+            padding: 12px 12px 68px 12px;
+        }
+
+        .related-text {
+            width: 375px;
+            color: #808080;
+            font-size: 20px;
+            line-height: 28px;
+            font-weight: normal;
+            margin-left: 26px;
+            margin-bottom: 30px;
+        }
+
+        .related-items {
+            width: 363px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+
+        .related-items .related-item {
+            width: 363px;
+            border-bottom: 1px solid #D0D0D0;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            margin-left: 6px;
+            margin-right: 17px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .related-items .related-item h6 {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 20px;
+            color: #A67A44;
+            margin-top: 19px;
+            margin-bottom: 10px;
+        }
+
+        .related-items .related-item h3 {
+            width: 180px;
+            height: 72px;
+            color: #262626;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 24px;
+            margin-top: 0px;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+
+
+        .related-items .related-item span {
+            font-size: 12px;
+            line-height: 24px;
+            font-weight: bold;
+            color: #D0d0d0;
+        }
+
+        .related-items .related-item img {
+            width: 88px;
+            margin: 0px;
+            display: inline-flex;
+            margin-left: 20px;
+            vertical-align: top;
+        }
+
+        .footer {
+            width: 375px;
+            padding: 0px 38px 0px 37px;
+            background-color: #ffffff;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .logo-desc-icons {
+            width: 300px;
+            font-size: 16px;
+            line-height: 26px;
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 400;
+            padding-top: 44px;
+        }
+
+        .logo-desc-icons p {
+            margin-bottom: 84px;
+            color: #808080;
+        }
+
+        .menu {
+            width: 300px;
+            height: 141px;
+            margin-left: 37px;
+            margin-right: 38px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-content: space-between;
+            padding-left: 37px;
+            padding-right: 42px;
+        }
+
+        .menu span {
+            color: #808080;
+            font-size: 18px;
+            line-height: 20px;
+            margin-bottom: 15px;
+        }
+
+        .menu .new-flag-block {
+            position: relative;
+        }
+        
+        .menu .new-flag {
+            background-color: #DA1F0D;
+            padding: 3px;
+            display: inline-block;
+            font-size: 12px;
+            color: #ffffff;
+            margin-right: 7px;
+            position: absolute;
+            right: 100%;
+        }
+
+        .icons {
+            width: 277px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 19px;
+            margin-bottom: 29px;
+        }
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="mobile-block">
+        <div id="header">
+            <div class="logo">
+                <img src="./images/twreporter-logo.svg">
+            </div>
+            <div class="ham">
+                <div style="margin-bottom: 10px"></div>
+                <div style="margin-bottom: 10px"></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="subtitle">
+            Reporter Saturday Features
+        </div>
+        <div class="maintitle">
+            【山思而行】登山中的死亡，對生命的凝視
+        </div>
+        
+        <figure>
+            <img src="./images/img1.jpg" width="100%">
+            <figcaption class="hero-figcaption">
+                登上山峰之途，就是在死亡的陰影之下，動用自身全部的感官與技藝，設法避開那些遭致危機的陷阱。圖為2016年2月，一支國際登山隊正跨越珠穆朗瑪峰基地營附近的冰川。（攝影／AP／Tashi Sherpa／達志影像）
+            </figcaption>
+        </figure>
+    </div>
+
+    <div class="mobile-block1">
+        <div id="metadata-block">
+            <div class="top-separation"></div>
+            <div class="category">環境・教育</div>
+            <div class="top-separation"></div>
+            <div class="date">刊出日期　2020/2/28</div>
+            <div class="tag-bt">#體育</div>
+            <div class="tag-bt" style="margin-left:5px">#山思而行</div>
+            <div class="bottom-separation"></div>
+        </div>
+    </div>
+
+    <div class="mobile-block2">
+        <div id="toolbox">
+            <img style="margin-right: 10px;" src="./images/add-bookmark.svg">
+            <img style="margin-right: 10px;" src="./images/tool-text.svg">
+            <img style="margin-right: 10px;" src="./images/tool-print.svg">
+            <img style="margin-right: 10px;" src="./images/share-line.svg">
+            <img style="margin-right: 10px;" src="./images/share-fb.svg">
+            <img style="margin-right: 0px;" src="./images/share-twitter.svg">
+        </div>
+    </div>
+
+    <div class="mobile-block">
+        <div class="paragraph">
+            講到登山，普遍的印象可能是壯闊的山景，雲海朝霞萬丈金芒；也可能是山上人與人之間的情誼，過地形時伸手扶一把，或濕冷雨天一碗熱呼呼的泡麵。我們在山中感受生命各種美好，汲取養分。就算是逆境，痛苦會過去，美會留下，回到人間後依舊能量滿滿再度出發。
+        </div>
+        <div class="paragraph">做為人，不知為何，我們傾向記憶美好，卻遺忘過程的苦痛。但我卻想，這是否讓我們理解、記憶一件事情性質的方式，也隨之產生偏誤？</div>
+        <div class="paragraph">我想說的是，登山是件會死人的運動。
+            <div class="abbreviation-circle">
+                <div class="abbreviation-triangle"></div>
+            </div>
+        </div>
+        <div class="paragraph">
+            那是個風和日麗的早晨，我跟阿果從標高5,600公尺的馬卡魯峰前進基地營帳篷中醒來。我倆前一天剛攀升至7,150公尺處進行適應攀登並下山，往後一週將是一系列壞天氣週期的到來，所以我們正準備迎接休息日的放鬆作息。
+        </div>
+        <div class="paragraph">慢慢踱進餐廳帳，吃完千篇一律的鬆餅加煎蛋，正想放個音樂泡杯咖啡，這時外面有人叫我。是Lakpa。</div>
+        <div class="paragraph">Lakpa是隔壁營區的商業團"Pioneer Adventure"的老闆，今年除了我跟阿果，馬卡魯峰這裡還有同樣來自台灣的登山者
+            <a target="_black" href="https://zh.wikipedia.org/wiki/%E8%A9%B9%E5%96%AC%E6%84%89" style="color: #D0A67D">三條魚</a>，她就在這個隊伍中。
+        </div>
+        <div class="paragraph" style="margin-bottom: 60px">原本以為Lakpa是來約我們晚上去他們隊上吃個飯之類的，興高采烈的走出去跟他打招呼，沒想到他表情挺嚴肅：</div>
+    
+        <figure style="padding-bottom: 20px">
+            <img src="./images/img2.jpg" width="100%">
+            <figcaption class="small-figcaption">
+                2017年3月，一隊登山者朝向尼泊爾羅布崎的登山營地前進。（攝影／AP／Tashi Sherpa／達志影像）
+            </figcaption>
+        </figure>
+    
+        <div class="paragraph">
+            其實我們也常忽略，就算我們將自己關在由水泥與文明構成的防護罩中，離野性的大自然遠遠的，各種意外還是可能在不經意間降臨。但我們卻很容易欺騙自己，在日常文明生活中，死亡離我們很遠。加上華人文化將生死視作忌諱而不與談論，所以大多數人其實並不真正意識到，死亡其實比我們想像中靠近。
+        </div>
+        <div class="paragraph">
+            我真正意識到這件事情是2013年，那年我在當兵，因為身體背面一個莫名的黑色凸起去看醫生。原本以為是痣，切掉就好了。結果醫生一看面色凝重：「你這個可能是黑色素瘤，得趕快預約開刀之後做切片檢查。」我一開始還想說那啥，不就是個小肉瘤嗎？結果一google之下，發現如果真的是黑色素瘤，
+        </div>
+        <div class="paragraph">
+            當然後來切片檢查是良性，切掉就沒事了。但這件事情某程度上改變了我的世界觀。在熱愛的事情上投注生命與熱情，就算有其風險，依舊要直面死亡。如此，也才是真正認真的直面生命。
+        </div>
+        <div class="paragraph">
+            生命有各種路徑與選擇，60億人也許有60億種人生樣態。重要的，是釐清並接受，自己走在怎樣的生命之道上。若能無悔，就是一種幸運。這篇文章，與其說是寫給不特定受眾，不如說是寫給自己。
+        </div>
+        <div class="paragraph">
+            自開始登山並投入海外攀登以來，隨著逐漸深入，難免就有愈多認識的人永遠留在了山上。問我怎麼去看待這些逝去？也許有些沉重，但更多的是祝福。
+        </div>
+        <div style="padding-top: 80px; padding-bottom: 80px;">
+            <img style="margin-left: 52px; margin-right: 53px;" src="images/Vector.png">
+        </div>
+        
+        <div class="relateds">
+            <div class="related-text">
+                相關文章
+            </div>
+            <div class="related-items">
+                <div class="related-item">
+                    <a href="https://www.twreporter.org/a/eight-thousanders-2019-taiwan-k2-project" target="_blank">
+                        <h6>環境・教育</h6>
+                        <h3>探險一步、前進一步── 呂忠翰、張元植挑戰台灣人首登「野蠻巨峰」K2</h3>
+                        <img src="./images/related-img1.png">
+                        <span>2019/4/26</span>
+                    </a>
+                </div>
+                <div class="related-item">
+                    <a href="https://www.twreporter.org/a/eight-thousanders-taiwan-history" target="_blank">
+                        <h6>環境・教育</h6>
+                        <h3>守在半山腰的指揮靈魂 「8千公尺英雄」推手連志展</h3>
+                        <img src="./images/related-img2.png">
+                        <span>2019/4/26</span>
+                    </a>
+                </div>
+                <div class="related-item">
+                    <a href="https://www.twreporter.org/a/eight-thousanders-how-to-climb-mountains" target="_blank">
+                        <h6>環境・教育</h6>
+                        <h3>山，在這裡──紙上攻頂14座8千公尺高山</h3>
+                        <img src="./images/related-img3.png">
+                        <span>2019/4/26</span>
+                    </a>
+                </div>
+                <div class="related-item">
+                    <a href="https://www.twreporter.org/a/saturday-features-mountain-climbing-acute-mountain-sickness" target="_blank">
+                        <h6>環境・教育</h6>
+                        <h3>【山思而行】高海拔的氧氣，就像自由</h3>
+                        <img src="./images/related-img4.png">
+                        <span>2019/12/14</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="logo-desc-icons">
+            <p>
+                2015年12月《報導者》正式上線，稟持深度、開放、非營利的精神，致力於公共領域調查報導，為讀者持續追蹤各項重要議題，共同打造多元的社會與媒體環境。
+            </p>
+        </div>
+    </div>
+    <div class="menu">
+        <span>關於我們</span>
+        <span>聯絡我們</span>
+        <span>作者群</span>
+        <div class="new-flag-block">
+            <div class="new-flag">New</div>
+            <span>影響力報告</span>
+        </div>
+        <span>隱私政策</span>
+        <span>許可協議</span>
+        <span>捐款徵信</span>
+        <span>常見問題</span>
+    </div>
+    <div class="menu" style="margin-top: 38px;">
+        <span>加入我們</span>
+        <span>訂閱電子報</span>
+        <span>報導者基金會新聞專區</span>
+    </div>
+    <div class="footer">
+        <div class="icons">
+            <img src="./images/facebook.png">
+            <img src="./images/instgram.png">
+            <img src="./images/line.png">
+            <img src="./images/medium.png">
+            <img src="./images/github.png">
+            <img src="./images/rss.png">
+        </div>
+
+    </div>
+    
+</body>
+
+</html>
